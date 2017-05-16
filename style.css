@@ -1,0 +1,216 @@
+/*==================================================
+=                   CSS properties                 =
+==================================================*/
+
+    /*==========  Basic ==========*/
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      font-family: 'Playfair Display', serif;
+      font-family: 'Questrial', sans-serif;
+      color:#3a4c9a;
+      font-weight:300;
+      background-color: #fafafa;
+    }
+    .division hr{
+       background-color: #b2e4d7;
+       border-color: #b2e4d7;
+       color: #b2e4d7;
+       height: 0.2px;
+       margin-top:10px;
+       width: 100%;
+    }
+
+    /*==========  zocial letters as icons  ==========*/
+
+    [class*="zocial-"]:before {
+      display: inline-block;
+      font-family: 'zocial', sans-serif;
+      display:inline-block;
+      color: gray;
+      width:2em;
+    }
+    a:hover [class*="zocial-"]:before {
+      color: #3d85c6;
+    }
+    a {
+      color: #4183C4;
+      font-weight: 300;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #3d85c6;
+      text-decoration:underline;
+    }
+    div#social a {
+      margin: 0 1em 0 0;
+    }
+
+    div#social a:last-of-type {
+      margin: 0;
+    }
+    footer{
+      margin: 0 auto;
+      max-width: 50em;
+      text-align: center;
+      padding:2em 0 4em 0;
+    }
+
+    /*==========  General  ==========*/
+
+    .title-super{
+      font-size: 3em;
+      font-weight:100;
+    }
+    .title-medium {
+      font-size: 2.7em;
+      padding-top: 1.5em;
+    }
+    .title-small{
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .title-xsmall{
+      font-size: 1.3em;
+    }
+    .text-muted{
+        color:#b2e4d7;
+    }
+    .col-padding{
+      padding:1em 1em;
+    }
+
+    /*==========  Specific  ==========*/
+    #banner img{
+      width:100%;
+    }
+    #logo img{
+      margin-top: 0.7em;
+      width: 15%;
+    }
+    .project-description {
+      padding:2em;
+    }
+    .cursor{
+      cursor: pointer;
+    }
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+      div#logo{
+        display: inline;
+      }
+      div#name{
+        display: inline-table;
+        float:right;
+      }
+      .title-super{
+        font-size: 2.5em;
+        margin-top:0.5em;
+        margin-bottom:0.06em;
+      }
+      .title-medium{
+        font-size: 2.2em;
+        padding-top: 0.6em;
+      }
+      .title-small {
+        font-size: 1.5em;
+      }
+      h4#slogan{
+        display: none;
+      }
+      .col-padding{
+        padding:1em 3em;
+      }
+      div#social a {
+        margin: 0 0.8em 0 0;
+      }
+      a {
+        font-size: 0.9em;
+      }
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 500px) {
+      #logo img{
+        width:12%;
+      }
+      h4#slogan{
+        display: inline;
+      }
+      h4{
+        margin: 0px 0 5px 0;
+      }
+      .title-super{
+        font-size: 2.6em;
+        margin-top:0.2em;
+        margin-bottom:0.08em;
+      }
+      .title-medium{
+        font-size: 2.3em;
+        padding-top: 0.6em;
+      }
+      .title-small {
+        font-size: 1.6em;
+      }
+      div#social a {
+        margin: 0 0.8em 0 0;
+      }
+      a {
+        font-size: 1.3em;
+      }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 750px) {
+      #logo img{
+        width:10%;
+      }
+      .title-medium{
+        font-size: 2.4em;
+      }
+      .title-small {
+        font-size: 1.8em;
+      }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+      #logo img{
+        width:15%;
+      }
+      .title-super{
+        font-size: 2.6em;
+      }
+      .title-medium{
+        font-size: 2.4em;
+      }
+      .title-small {
+        font-size: 1.6em;
+      }
+      .col-padding{
+        padding:0.8em 0.8em;
+      }
+      a{
+        font-size: 1em;
+      }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+      #logo img{
+        margin-top: 1em;
+      }
+      .title-super{
+        margin-top:0.4em;
+        margin-bottom:0.1em;
+      }
+    }
