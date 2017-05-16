@@ -7,9 +7,10 @@
 */
 'use strict'
 
-var mozjpeg = require('imagemin-mozjpeg');
+
 
 module.exports = function(grunt) {
+var mozjpeg = require('imagemin-mozjpeg');
 
   grunt.initConfig({
     responsive_images: {
@@ -101,20 +102,20 @@ module.exports = function(grunt) {
         use: [mozjpeg()]
       },
       files: {                         // Dictionary of files
-        'dist/img.png': 'src/img.png', // 'destination': 'source'
-        'dist/img.jpg': 'src/img.jpg',
-        'dist/img.gif': 'src/img.gif'
+        'images/img.png': 'images_src/img.png', // 'destination': 'source'
+        'images/img.jpg': 'images_src/img.jpg',
+        'images/img.gif': 'images_src/img.gif'
       }
     },
     dynamic: {                         // Another target
       files: [{
         expand: true,                  // Enable dynamic expansion
-        cwd: 'src/',                   // Src matches are relative to this path
+        cwd: 'images/',                   // Src matches are relative to this path
         src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-        dest: 'dist/'                  // Destination path prefix
+        dest: 'images/'                  // Destination path prefix
       }]
     }
-  },
+  }
 
   });
 
@@ -123,6 +124,6 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-contrib-clean'); //COMMENT --> this is out because we can only run 1 file at the time to get 1x pics. also because we dont want to
    grunt.loadNpmTasks('grunt-contrib-copy');  //            delete, make dir, copy AGAIN that is why the tasks are out.
    grunt.loadNpmTasks('grunt-mkdir');
-   grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images:dev1', 'responsive_images:dev2', 'imagemin']);
+   grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images:dev1', 'responsive_images:dev2', 'imagemin:dynamic']);
   //grunt.registerTask('default', ['responsive_images:dev1', 'responsive_images:dev2']); // use it whe you want to add pictures to the dir
 };
