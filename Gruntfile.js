@@ -97,7 +97,7 @@ var mozjpeg = require('imagemin-mozjpeg');
   imagemin: {                          // Task
     static: {                          // Target
       options: {                       // Target options
-        optimizationLevel: 5,
+        optimizationLevel: 7,
         svgoPlugins: [{ removeViewBox: false }],
         use: [mozjpeg()]
       },
@@ -108,6 +108,9 @@ var mozjpeg = require('imagemin-mozjpeg');
       }
     },
     dynamic: {                         // Another target
+      options: {                       // Target options
+        optimizationLevel: 7
+      },
       files: [{
         expand: true,                  // Enable dynamic expansion
         cwd: 'images/',                   // Src matches are relative to this path
@@ -124,6 +127,6 @@ var mozjpeg = require('imagemin-mozjpeg');
    grunt.loadNpmTasks('grunt-contrib-clean'); //COMMENT --> this is out because we can only run 1 file at the time to get 1x pics. also because we dont want to
    grunt.loadNpmTasks('grunt-contrib-copy');  //            delete, make dir, copy AGAIN that is why the tasks are out.
    grunt.loadNpmTasks('grunt-mkdir');
-   grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images:dev1', 'responsive_images:dev2', 'imagemin:dynamic']);
+   grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images:dev1', 'responsive_images:dev2', 'imagemin:dynamic', 'imagemin:dynamic']);
   //grunt.registerTask('default', ['responsive_images:dev1', 'responsive_images:dev2']); // use it whe you want to add pictures to the dir
 };
