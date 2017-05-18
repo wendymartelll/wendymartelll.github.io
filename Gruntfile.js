@@ -97,7 +97,7 @@ var mozjpeg = require('imagemin-mozjpeg');
   imagemin: {                          // Task
     static: {                          // Target
       options: {                       // Target options
-        optimizationLevel: 3,
+        optimizationLevel: 5,
         svgoPlugins: [{ removeViewBox: false }],
         use: [mozjpeg()]
       },
