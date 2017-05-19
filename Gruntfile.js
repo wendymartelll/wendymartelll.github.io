@@ -109,7 +109,7 @@ var mozjpeg = require('imagemin-mozjpeg');
     },
     dynamic: {                         // Another target
       options: {                       // Target options
-        optimizationLevel: 3
+        optimizationLevel: 7,
       },
       files: [{
         expand: true,                  // Enable dynamic expansion
