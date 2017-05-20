@@ -20,7 +20,7 @@ var mozjpeg = require('imagemin-mozjpeg');
           sizes: [{
             width:1600,
             suffix:'_large_2x',
-            quality:30,
+            quality:50,
 
             // width:800,
             // suffix:'_large_1x', ---> Use when you need this size -- it is one si
@@ -133,6 +133,6 @@ var mozjpeg = require('imagemin-mozjpeg');
    grunt.loadNpmTasks('grunt-contrib-clean'); //COMMENT --> this is out because we can only run 1 file at the time to get 1x pics. also because we dont want to
    grunt.loadNpmTasks('grunt-contrib-copy');  //            delete, make dir, copy AGAIN that is why the tasks are out. 'imagemin:dynamic', 'imagemin:dynamic',
    grunt.loadNpmTasks('grunt-mkdir');
-   grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images:dev1', 'responsive_images:dev2', 'imagemagick-convert:dev']);
+   grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images:dev1', 'responsive_images:dev2', 'imagemin:dynamic','imagemagick-convert:dev']);
   //grunt.registerTask('default', ['responsive_images:dev1', 'responsive_images:dev2']); // use it whe you want to add pictures to the dir
 };
