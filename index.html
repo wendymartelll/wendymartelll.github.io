@@ -11,7 +11,7 @@
   <script type="text/javascript " src="bootstrap/js/jquery-3.1.1.min.js "></script>
   <script type="text/javascript " src="bootstrap/js/bootstrap.min.js "></script>
   <link rel="stylesheet " href="bootstrap/css/bootstrap.css ">
-  <link rel="stylesheet " href="style.css ">
+  <link rel="stylesheet " href="style.css " async>
 </head>
 
 <body>
@@ -19,7 +19,9 @@
 
     <div id="header " class="row ">
       <div id="logo " class="col-md-6 ">
-        <img src="images_scr/logo_00.jpg " srcset="images/logo_00-800_large_1x.jpg " alt="Wendy 's Logo">
+        <source media="(min-width: 750px)" srcset="images/logo_00-1600_large_2x.jpg  2x">
+        <source media="(min-width: 500px)" srcset="images/logo_00-800_large_1x.jpg  1x">
+        <img src="images_scr/logo_00.jpg " class="img-responsive" alt="Wendy's Logo">
       </div>
       <div id="name" class="col-md-6 text-right ">
         <h1 class="title-super">Wendy Martell</h1>
