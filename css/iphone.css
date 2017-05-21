@@ -1,0 +1,45 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 220px) {
+      #logo img{
+        width:12%;
+        margin-top: 1em;
+      }
+      div#logo{
+        display: inline;
+      }
+      div#name{
+        display: inline-table;
+        float:right;
+      }
+      .title-super{
+        font-size: 2.5em;
+        margin-top:0.5em;
+        margin-bottom:0.06em;
+      }
+      .title-medium{
+        font-size: 2.2em;
+        padding-top: 0.6em;
+      }
+      .title-small {
+        font-size: 1.5em;
+      }
+      h4#slogan{
+        display: none;
+      }
+      .col-padding{
+        padding:1em 3em;
+      }
+      div#social a {
+        margin: 0 0.8em 0 0;
+      }
+      a {
+        font-size: 0.9em;
+      }
+    }

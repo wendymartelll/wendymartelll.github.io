@@ -1,0 +1,13 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+      .title-super{
+        margin-top:0.4em;
+        margin-bottom:0.1em;
+      }
+    }

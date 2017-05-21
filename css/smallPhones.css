@@ -1,0 +1,35 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 500px) {
+      #logo img{
+        width:12%;
+      }
+      h4#slogan{
+        display: inline;
+      }
+      h4{
+        margin: 0px 0 5px 0;
+      }
+      .title-super{
+        font-size: 2.6em;
+        margin-top:0.2em;
+        margin-bottom:0.08em;
+      }
+      .title-medium{
+        font-size: 2.3em;
+        padding-top: 0.6em;
+      }
+      .title-small {
+        font-size: 1.6em;
+      }
+      div#social a {
+        margin: 0 0.8em 0 0;
+      }
+      a {
+        font-size: 1.3em;
+      }
+    }

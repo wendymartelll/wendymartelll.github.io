@@ -1,0 +1,16 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 750px) {
+      #logo img{
+        width:12%;
+      }
+      .title-medium{
+        font-size: 2.4em;
+      }
+      .title-small {
+        font-size: 1.8em;
+      }
+    }
