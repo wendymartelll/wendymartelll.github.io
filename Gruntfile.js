@@ -93,11 +93,11 @@ var mozjpeg = require('imagemin-mozjpeg');
       },
     },
 
-  "imagemagick-convert" : {
-    dev:{
-      args:['images/w_media-800_large_2x.jpg', '-compress','.jpeg','-quality','92','-sampling-factor','4:2:0', 'images/w_media-800_large_2x.jpg']
-    }
-  },
+  // "imagemagick-convert" : {
+  //   dev:{
+  //     args:['images/w_media-800_large_2x.jpg', '-compress','.jpeg','-quality','92','-sampling-factor','4:2:0', 'images/w_media-800_large_2x.jpg']
+  //   }
+  // },
 
   imagemin: {                          // Task
     static: {                          // Target
