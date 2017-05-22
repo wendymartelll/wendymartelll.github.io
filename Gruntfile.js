@@ -18,7 +18,7 @@ var mozjpeg = require('imagemin-mozjpeg');
         options: {
           engine: 'im',
           sizes: [{
-            width:1600,
+            width:800,
             suffix:'_large_2x',
             quality:30,
 
@@ -95,7 +95,7 @@ var mozjpeg = require('imagemin-mozjpeg');
 
   "imagemagick-convert" : {
     dev:{
-      args:['images/w_media-1600_large_2x.jpg', '-compress','.jpeg','-quality','92','-sampling-factor','4:2:0', 'images/w_media-1600_large_2x.jpg']
+      args:['images/w_media-800_large_2x.jpg', '-compress','.jpeg','-quality','92','-sampling-factor','4:2:0', 'images/w_media-800_large_2x.jpg']
     }
   },
 
