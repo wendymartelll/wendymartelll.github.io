@@ -18,11 +18,11 @@ var mozjpeg = require('imagemin-mozjpeg');
         options: {
           engine: 'im',
           sizes: [{
-            width:800,
+            width:600,
             suffix:'_large_2x',
             quality:30
           }, {
-            width:400,
+            width:300,
             suffix:'_large_1x', // ---> Use when you need this size -- it is one si
             quality:50
           }]
@@ -43,7 +43,7 @@ var mozjpeg = require('imagemin-mozjpeg');
         options: {
           engine: 'im',
           sizes: [{
-            width:100,
+            width:200,
             suffix:'_large_2x',
             quality:30
           }, {
@@ -62,11 +62,11 @@ var mozjpeg = require('imagemin-mozjpeg');
         options: {
           engine: 'im',
           sizes: [{
-            width:700,
+            width:1600,
             suffix:'_large_2x',
-            quality:50
+            quality:30
           }, {
-            width:700,
+            width:800,
             suffix:'_large_1x', // ---> Use when you need this size -- it is one si
             quality:50
           }]
