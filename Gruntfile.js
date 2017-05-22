@@ -93,11 +93,32 @@ var mozjpeg = require('imagemin-mozjpeg');
       },
     },
 
-  // "imagemagick-convert" : {
-  //   dev:{
-  //     args:['images/w_media-800_large_2x.jpg', '-compress','.jpeg','-quality','92','-sampling-factor','4:2:0', 'images/w_media-800_large_2x.jpg']
-  //   }
-  // },
+  "imagemagick-convert" : {
+    dev1:{
+      args:['images/w_media-800_large_2x.jpg', '-strip','-quality','92','-interlace','JPEG','-colorspace','RGB','images/w_media-800_large_2x.jpg']
+    },
+    dev2:{
+      args:['images/w_pictures-800_large_2x.jpg', '-strip','-quality','92','-interlace','JPEG','-colorspace','RGB','images/w_pictures-800_large_2x.jpg']
+    },
+    dev3:{
+      args:['images/w_text-800_large_2x.jpg', '-strip','-quality','92','-interlace','JPEG','-colorspace','RGB','images/w_text-800_large_2x.jpg']
+    },
+    dev4:{
+      args:['images/w_final-800_large_2x.jpg', '-strip','-quality','92','-interlace','JPEG','-colorspace','RGB','images/w_final-800_large_2x.jpg']
+    },
+    dev5:{
+      args:['images/w_tables-800_large_2x.jpg', '-strip','-quality','92','-interlace','JPEG','-colorspace','RGB','images/w_tables-800_large_2x.jpg']
+    },
+    dev6:{
+      args:['images/w_forms-800_large_2x.jpg', '-strip','-quality','92','-interlace','JPEG','-colorspace','RGB','images/w_forms-800_large_2x.jpg']
+    },
+    dev7:{
+      args:['images/w_banner-800_large_2x.jpg', '-strip','-quality','92','-interlace','JPEG','-colorspace','RGB','images/w_banner-800_large_2x.jpg']
+    },
+    dev8:{
+      args:['images/logo_00-800_large_2x.jpg', '-strip','-quality','92','-interlace','JPEG','-colorspace','RGB','images/logo_00-800_large_2x.jpg']
+    },
+  },
 
   imagemin: {                          // Task
     static: {                          // Target
@@ -134,6 +155,7 @@ var mozjpeg = require('imagemin-mozjpeg');
    grunt.loadNpmTasks('grunt-contrib-copy');  //            delete, make dir, copy AGAIN that is why the tasks are out. 'imagemin:dynamic', 'imagemin:dynamic',
    grunt.loadNpmTasks('grunt-mkdir');
    grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images:dev1',
-        'responsive_images:dev2']);
+        'responsive_images:dev2', 'imagemagick-convert:dev1', 'imagemagick-convert:dev2','imagemagick-convert:dev3', 'imagemagick-convert:dev4',
+      'imagemagick-convert:dev5', 'imagemagick-convert:dev6', 'imagemagick-convert:dev7', 'imagemagick-convert:dev8']);
   //grunt.registerTask('default', ['responsive_images:dev1', 'responsive_images:dev2']); // use it whe you want to add pictures to the dir
 };
