@@ -64,7 +64,7 @@ var mozjpeg = require('imagemin-mozjpeg');
           sizes: [{
             width:1000,
             suffix:'_large_2x',
-            quality:30
+            quality:50
           }, {
             width:500,
             suffix:'_large_1x', // ---> Use when you need this size -- it is one si
