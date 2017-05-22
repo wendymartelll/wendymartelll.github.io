@@ -20,11 +20,11 @@ var mozjpeg = require('imagemin-mozjpeg');
           sizes: [{
             width:300,
             suffix:'_large_2x',
-            quality:50,
-
-            // width:800,
-            // suffix:'_large_1x', ---> Use when you need this size -- it is one si
-            // quality:50,
+            quality:30
+          }, {
+            width:300,
+            suffix:'_large_1x', // ---> Use when you need this size -- it is one si
+            quality:50
           }]
         }, files: [{
                   expand: true,
@@ -39,30 +39,43 @@ var mozjpeg = require('imagemin-mozjpeg');
         */
 
       },
-      dev2: {
+      logo: {
         options: {
           engine: 'im',
           sizes: [{
-            // width:1600,
-            // suffix:'_large_2x',
-            // quality:30,
-
-            width:300,
+            width:100,
+            suffix:'_large_2x',
+            quality:30
+          }, {
+            width:100,
             suffix:'_large_1x', // ---> Use when you need this size -- it is one si
-            quality:50,
+            quality:50
           }]
         }, files: [{
                   expand: true,
                   src: ['*.{gif,jpg,png}'],
-                  cwd: 'images_src/',
+                  cwd: 'images_src/logo/',
                   dest:'images/'
           }]
-
-        /*
-        You don't need to change this part if you don't change
-        the directory structure.
-        */
-
+      },
+      banner: {
+        options: {
+          engine: 'im',
+          sizes: [{
+            width:700,
+            suffix:'_large_2x',
+            quality:50
+          }, {
+            width:700,
+            suffix:'_large_1x', // ---> Use when you need this size -- it is one si
+            quality:50
+          }]
+        }, files: [{
+                  expand: true,
+                  src: ['*.{gif,jpg,png}'],
+                  cwd: 'images_src/banner/',
+                  dest:'images/'
+          }]
       }
     },
 
@@ -155,7 +168,7 @@ var mozjpeg = require('imagemin-mozjpeg');
    grunt.loadNpmTasks('grunt-contrib-copy');  //            delete, make dir, copy AGAIN that is why the tasks are out. 'imagemin:dynamic', 'imagemin:dynamic',
    grunt.loadNpmTasks('grunt-mkdir');
    grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images:dev1',
-         'responsive_images:dev2']); //, 'imagemagick-convert:dev1', 'imagemagick-convert:dev2','imagemagick-convert:dev3', 'imagemagick-convert:dev4',
+         'responsive_images:logo', 'responsive_images:banner']); //, 'imagemagick-convert:dev1', 'imagemagick-convert:dev2','imagemagick-convert:dev3', 'imagemagick-convert:dev4',
       // 'imagemagick-convert:dev5', 'imagemagick-convert:dev6', 'imagemagick-convert:dev7', 'imagemagick-convert:dev8']);
   //grunt.registerTask('default', ['responsive_images:dev1', 'responsive_images:dev2']); // use it whe you want to add pictures to the dir
 };
