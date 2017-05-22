@@ -18,11 +18,11 @@ var mozjpeg = require('imagemin-mozjpeg');
         options: {
           engine: 'im',
           sizes: [{
-            width:300,
+            width:800,
             suffix:'_large_2x',
             quality:30
           }, {
-            width:300,
+            width:400,
             suffix:'_large_1x', // ---> Use when you need this size -- it is one si
             quality:50
           }]
@@ -168,7 +168,6 @@ var mozjpeg = require('imagemin-mozjpeg');
    grunt.loadNpmTasks('grunt-contrib-copy');  //            delete, make dir, copy AGAIN that is why the tasks are out. 'imagemin:dynamic', 'imagemin:dynamic',
    grunt.loadNpmTasks('grunt-mkdir');
    grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images:dev1',
-         'responsive_images:logo', 'responsive_images:banner']); //, 'imagemagick-convert:dev1', 'imagemagick-convert:dev2','imagemagick-convert:dev3', 'imagemagick-convert:dev4',
-      // 'imagemagick-convert:dev5', 'imagemagick-convert:dev6', 'imagemagick-convert:dev7', 'imagemagick-convert:dev8']);
-  //grunt.registerTask('default', ['responsive_images:dev1', 'responsive_images:dev2']); // use it whe you want to add pictures to the dir
+         'responsive_images:logo', 'responsive_images:banner']);
+
 };
