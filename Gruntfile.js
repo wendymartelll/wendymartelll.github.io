@@ -43,9 +43,9 @@ var mozjpeg = require('imagemin-mozjpeg');
         options: {
           engine: 'im',
           sizes: [{
-            width:150,
+            width:120,
             suffix:'_large_2x',
-            quality:30
+            quality:50
           }, {
             width:100,
             suffix:'_large_1x', // ---> Use when you need this size -- it is one si
@@ -62,9 +62,9 @@ var mozjpeg = require('imagemin-mozjpeg');
         options: {
           engine: 'im',
           sizes: [{
-            width:1600,
+            width:1000,
             suffix:'_large_2x',
-            quality:30
+            quality:80
           }, {
             width:600,
             suffix:'_large_1x', // ---> Use when you need this size -- it is one si
