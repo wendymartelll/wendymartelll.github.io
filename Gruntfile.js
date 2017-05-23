@@ -62,11 +62,11 @@ var mozjpeg = require('imagemin-mozjpeg');
         options: {
           engine: 'im',
           sizes: [{
-            width:1000,
+            width:1600,
             suffix:'_large_2x',
-            quality:50
+            quality:30
           }, {
-            width:500,
+            width:600,
             suffix:'_large_1x', // ---> Use when you need this size -- it is one si
             quality:50
           }]
